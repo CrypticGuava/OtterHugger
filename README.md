@@ -25,6 +25,12 @@ Usage
 9. Pwned
 
 
+<img width="1815" height="662" alt="flow" src="https://github.com/user-attachments/assets/984a6132-e51e-4800-aa30-5442dad13781" />
+
+
+
+
+
 Challenge.
 I challenge you to find any traditional antivirus that will detect this payload. It patches AMSI therefore antivirus does not even get the oppurtunity to scan it. Also it doesn't touch disk, ever. (Post exploitation detectopn does not count, you will eventually get detected by being "loud")
 
