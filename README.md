@@ -11,7 +11,7 @@ Golang, pip, and python.
 
 
 Installation one-liner
-''' sudo curl https://github.com/CrypticGuava/OtterHugger/tree/main && cd ~/Downloads/OtterHugger/ '''
+``` sudo curl https://github.com/CrypticGuava/OtterHugger/tree/main && cd ~/Downloads/OtterHugger/ ```
 
 Usage
 1. Generate shellcode from C2
