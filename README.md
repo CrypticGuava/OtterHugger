@@ -26,7 +26,7 @@ Usage
 
 
 Challenge.
-I challenge you to find a single traditional antivirus that will detect this payload. It patches AMSI therefore antivirus does not even get the oppurtunity to scan it. Also it doesn't touch disk, ever.
+I challenge you to find any traditional antivirus that will detect this payload. It patches AMSI therefore antivirus does not even get the oppurtunity to scan it. Also it doesn't touch disk, ever. (Post exploitation detectopn does not count, you will eventually get detected by being "loud")
 
 Contact
 GuavaMonkey4422@protonmail.com
