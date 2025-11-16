@@ -1,0 +1,32 @@
+ATT&CK
+
+Recon - 
+nmap -sV =script-vul.nse <ip>
+enumerates CVEs, 
+whois/nslookup <website if applicable - skip if not testing webhost>
+link CVE to searchsploit/msfconsole. example ```msfconsole search <CVE number>``` ```use 1, 2, 3 ,4 ```
+
+Initial access
+msfconsole, cobalt-strike, havoc, brute-ratel, hydra, bettercap. OtterHugger.
+
+Persistence
+lolbas, lolbins, startup, chronjobs, sharpersist.
+
+Priv Esculation
+Lolbins, WinPEAS, LinPEAS. (living off land methodology will get you far with Priv-esculation)
+
+OtterHugger will cover the steps inbetween, I've designed this with evasion in mind and this has withstanded antivirus scans. 
+
+Credentials
+Migrate to LSASS using metaspoit, MITM, mimikatz
+
+Lateral movement
+-covered in persistence, we do it early for efficiency-
+
+Command and Control
+We used OtterHugger to wrap a C2. See how we already covered Active Directory and C2s?
+
+Exfil 
+- Already done with C2s, stealthier as we have sleep and jitter, data exfil without detection already possible in the 2nd step, use gobuster/dirbuster for webhost, then exfil using OtterHugger -
+
+
