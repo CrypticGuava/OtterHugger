@@ -13,7 +13,7 @@ Golang, pip, and python.
 
 
 Installation one-liner
-``` sudo wget https://github.com/CrypticGuava/OtterHugger/blob/main/OtterHugger && nano OtterHugger```
+``` sudo wget https://github.com/CrypticGuava/OtterHugger/blob/main/OtterHugger & nano OtterHugger```
 
 Usage
 1. Generate shellcode from C2, enable AMSI patching there. It's not done natively with OtterHugger yet.
