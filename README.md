@@ -12,7 +12,7 @@ Golang, pip, and python.
 
 
 Installation one-liner
-``` sudo curl https://github.com/CrypticGuava/OtterHugger/tree/main && curl https://github.com/EgeBalci/sgn/releases &&  cd ~/Downloads/OtterHugger/ && sudo chmod +x sgn ```
+``` sudo curl https://github.com/CrypticGuava/OtterHugger/tree/main ```
 
 Usage
 1. Generate shellcode from C2
