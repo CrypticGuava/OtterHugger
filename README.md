@@ -1,7 +1,8 @@
 # OtterHugger
 
 Best in class fileless polymorphic loader. Written in C.
-Patches AMSI, ETW, never touches disk, silent as a mouse.
+Patches AMSI, ETW, never touches disk, silent as a mouse. I've tested this on different antiviruses including Windows Defender, Avast, Crowdstrike Falcon. 
+
 
 DISCLAIMER: This requires licenses to Cobalt-Strike for authorized penetration testing. Do not attack machines you do not own or do not have permission to test.
 The author will not be held liable for misuse of this product.
@@ -12,7 +13,7 @@ Golang, pip, and python.
 
 
 Installation one-liner
-``` sudo wget https://github.com/CrypticGuava/OtterHugger/blob/main/OtterHugger ```
+``` sudo wget https://github.com/CrypticGuava/OtterHugger/blob/main/OtterHugger && nano OtterHugger```
 
 Usage
 1. Generate shellcode from C2, enable AMSI patching there. It's not done natively with OtterHugger yet.
@@ -29,7 +30,7 @@ Usage
 <img width="1815" height="662" alt="flow" src="https://github.com/user-attachments/assets/984a6132-e51e-4800-aa30-5442dad13781" />
 credit@ EgeBalci
 
-
+Fun fact: OtterHugger got its name because it acts as a "wrapper". Imagine an otter hugging an apple down a stream. OtterHugger "wraps" shellcode with additional customizations such as AMSI patching and converts them to an executable. It started out as a placeholder name but I've decided to give it lore post publishing. 
 
 
 Challenge.
