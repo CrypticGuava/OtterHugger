@@ -15,9 +15,9 @@ Installation one-liner
 ``` sudo wget https://github.com/CrypticGuava/OtterHugger/blob/main/OtterHugger ```
 
 Usage
-1. Generate shellcode from C2
+1. Generate shellcode from C2, enable AMSI patching there. It's not done natively with OtterHugger yet.
 2. Encode with SGN
-3. xxd <payload> > "payload.h"
+3. ``` bash xxd <payload> > "payload.h" ```
 4. add payload.h as header of scripting tool of choice
 5. add OtterHugger as main script
 6. Compile
