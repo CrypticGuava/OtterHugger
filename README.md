@@ -33,7 +33,7 @@ credit@ EgeBalci
 
 
 Challenge.
-I challenge you to find any traditional antivirus that will detect this payload. It patches AMSI therefore antivirus does not even get the oppurtunity to scan it. Also it doesn't touch disk, ever. (Post exploitation detectopn does not count, you will eventually get detected by being "loud")
+I challenge you to find any traditional antivirus that will detect this payload. It patches AMSI therefore antivirus does not even get the oppurtunity to scan it. Also it doesn't touch disk, ever. (Post exploitation detection does not count, you will eventually get detected by being "loud", OtterHugger is one of the better hacking resources out there, you're not going to be able to hashdump willy nilly using metasploit, no matter how you encode your payloads due to heuristics.)
 
 Contact
 GuavaMonkey4422@protonmail.com
