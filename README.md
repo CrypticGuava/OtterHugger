@@ -1,6 +1,7 @@
 # OtterHugger
 
 Best in class fileless polymorphic loader.
+Patches AMSI, ETW, never touches disk, silent as a mouse.
 
 DISCLAIMER: This requires licenses to Cobalt-Strike for authorized penetration testing. Do not attack machines you do not own or do not have permission to test.
 The author will not be held liable for misuse of this product.
