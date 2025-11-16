@@ -22,7 +22,7 @@ Usage
 5. add OtterHugger as main script
 6. Compile
 7. Follow ATT&CK matrix, this loader is for step 2 of ATT&CK.
-8. GoPhish, SMTP spoof, MITM redirect, USB drop, msfconsole, etc.
+8. GoPhish, SMTP spoof, MITM redirect, USB drop, msfconsole, etc. Just some examples. If you need a loader for an smb attack, this will work also. No phishing required.
 9. Pwned
 
 
