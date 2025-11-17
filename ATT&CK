@@ -1,5 +1,8 @@
 ATT&CK
 
+This is all from memory so pardon if I've made a mistake to the commands. 
+Regardless, It's close enough where you should be able to check what I meant to write.
+
 Recon - 
 nmap -sV =script-vul.nse <ip>
 enumerates CVEs, 
